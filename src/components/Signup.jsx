@@ -20,7 +20,7 @@ const Signup = (props) => {
     try {
       setData({ ...data, error: null });
       await axios.post(
-        "/ticket/register",
+        "https://ticket-nest.herokuapp.com/ticket/register",
         { name, email, password },
         {
           headers: {
