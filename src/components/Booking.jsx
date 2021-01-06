@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 
 const getAllopentickets=async()=>{
     console.log("openticket");
-    const response=await axios.get("http://localhost:3000/ticket/status/open");
+    const response=await axios.get("https://ticket-nest.herokuapp.com/ticket/status/open");
     console.log(response);
     getOpen(response.data);
     console.log(open);
@@ -44,7 +44,7 @@ const onSubmit=async(e)=> {
             email
         };
         console.log(bookingdata);
-        await axios.post("http://localhost:3000/ticket/addTicket",bookingdata,
+        await axios.post("https://ticket-nest.herokuapp.com/ticket/addTicket",bookingdata,
          {
           headers: {
             "Content-Type": "application/json",
